@@ -49,15 +49,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     snapshot.forEach(doc => {
         const docData = doc.data();
         const similarity = calculateSimilarity(queryEmbedding, docData.embedding);
-        console.log('similarity')
-        console.log(similarity)
+
         if (similarity > highestSimilarity) {
             highestSimilarity = similarity;
             bestMatch.push(docData.content);
         }
     });
-    console.log(snapshot.size)
-    console.log(bestMatch.length)
+
     if (bestMatch.length > 0) {
         const generatedResponse = await generateResponse(bestMatch, query as string);
         const bestMatchedResponses = bestMatch.join('\n\n ------- \n\n ');

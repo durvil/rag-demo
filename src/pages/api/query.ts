@@ -41,7 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const queryEmbedding = generateEmbedding(query as string);
 
 
-    const snapshot = await firestore.collection('ai-documents')
+    const snapshot = await firestore.collection('rag-demo-data')
         .where('userId', '==', userId)
         .get();
 

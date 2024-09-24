@@ -12,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             content: content,
         });
 
-        await firestore.collection('ai-documents').add({
+        await firestore.collection('rag-demo-data').add({
             userId,
             content,
             embedding

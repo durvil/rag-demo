@@ -1,0 +1,38 @@
+{
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "next start",
+    "build": "next build",
+    "build:watch": "tsc --watch",
+    "dev": "next dev",
+    "lint": "next lint"
+  },
+  "name": "Demo RAG",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@genkit-ai/ai": "^0.5.13",
+    "@genkit-ai/core": "^0.5.13",
+    "@genkit-ai/dotprompt": "^0.5.13",
+    "@genkit-ai/firebase": "^0.5.13",
+    "@genkit-ai/flow": "^0.5.13",
+    "@genkit-ai/vertexai": "^0.5.13",
+    "@google-cloud/aiplatform": "^3.29.0",
+    "express": "^4.21.0", 
+    "llm-chunk": "^0.0.1",
+    "next": "14.2.12",
+    "react": "^18",
+    "react-dom": "^18",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.12",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.5.0"
+  }
+}
